@@ -58,8 +58,9 @@ function Game() {
   }, [markedTiles]);
 
   function toggleMark(id) {
+    if (id === MIDDLE.toString()) return;
     const marked = [...markedTiles];
-    marked[id] = marked[id] === "marked" ? "unmarked" : "marked";
+    marked[id] = marked[id] === M ? UM : M;
     setMarkedTiles(marked);
   }
 

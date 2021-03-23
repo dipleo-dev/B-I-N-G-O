@@ -1,33 +1,19 @@
 .tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 10px;
-    min-height: 40px;
-    font-weight: bold;
-    font-size: 20px;
-  
-    border: 4px saddlebrown groove;
-    border-radius: 15px;
-  
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  min-height: 40px;
+  font-weight: bold;
+  font-size: 20px;
+
+  border: 4px saddlebrown groove;
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  &-set {
+    background-color: greenyellow;
   }
-  
-  .tileset {
-    background: greenyellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    padding: 10px;
-    min-height: 40px;
-    font-weight: bold;
-    font-size: 20px;
-  
-    border: 4px saddlebrown groove;
-    border-radius: 15px;
-  
-    cursor: pointer;
-  }
-    
+}
