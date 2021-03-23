@@ -50,8 +50,7 @@ function Game() {
 
   useEffect(() => {
     const checked = checkForWin(markedTiles);
-    // If there is a new bingo you should fire your confetti or whatever
-    if (!arrayEquals(checked, bingos)) {
+    if (checked.length >= bingos.length && !arrayEquals(checked, bingos)) {
       handleShow();
     }
     console.log("NEW BINGO: ", !arrayEquals(checked, bingos));
