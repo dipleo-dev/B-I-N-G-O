@@ -4,7 +4,9 @@ import content from "../../../data/tileContent";
 import Tile from "../../molecules/tile";
 import { M, UM, checkForWin, MIDDLE } from "../../../utils/checker";
 import Button from "../../atoms/button";
-
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Reward from "../reward";
 
 function Game() {
   const [data, setData] = useState(
@@ -16,6 +18,7 @@ function Game() {
   const [markedTiles, setMarkedTiles] = useState(Array(25).fill(UM));
 
   const [bingos, setBingos] = useState([]);
+  const [showReward, setShowReward] = useState(false);
 
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -35,6 +38,9 @@ function Game() {
     );
   }
 
+  const handleClose = () => setShowReward(false);
+  const handleShow = () => setShowReward(true);
+
   useEffect(() => {
     const tempArr = [...markedTiles];
     tempArr[MIDDLE] = M;
@@ -45,6 +51,9 @@ function Game() {
   useEffect(() => {
     const checked = checkForWin(markedTiles);
     // If there is a new bingo you should fire your confetti or whatever
+    if (!arrayEquals(checked, bingos)) {
+      handleShow();
+    }
     console.log("NEW BINGO: ", !arrayEquals(checked, bingos));
     setBingos(checked);
   }, [markedTiles]);
@@ -83,7 +92,14 @@ function Game() {
       </div>
 
       <Button label={"Reset"} onClick={resetGame} />
-      
+      <Modal show={showReward} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>WOOHOO!!!!!.....YOU GOT A BINGO</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Reward />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }
