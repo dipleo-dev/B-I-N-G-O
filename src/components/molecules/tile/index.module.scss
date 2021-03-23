@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width:18vw;
+  height:18vw;
   padding: 10px;
-  min-height: 40px;
   font-weight: bold;
-  font-size: 20px;
+  font-size:7px;
 
   border: 4px saddlebrown groove;
   border-radius: 15px;
@@ -15,5 +15,47 @@
 
   &-set {
     background-color: greenyellow;
+  }
+}
+@media(min-width:720px){
+  .tile{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width:18vh;
+  height:18vh;
+  padding: 10px;
+  font-weight: bold;
+  font-size:15px;
+
+  border: 4px saddlebrown groove;
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  &-set {
+    background-color: greenyellow;
+  }
+  }
+}
+@media(max-width:320px){
+  .tile{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width:18vw;
+  height:18vw;
+  padding: 10px;
+  font-weight: bold;
+  font-size:6px;
+
+  border: 4px saddlebrown groove;
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  &-set {
+    background-color: greenyellow;
+  }
   }
 }

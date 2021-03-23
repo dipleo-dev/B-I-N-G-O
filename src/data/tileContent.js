@@ -3,7 +3,7 @@ const content = [
   "Can you email that to everyone?",
   " _____, are you there?",
   "you're still sharing...",
-  "Hey guys, I have to jump to another call",
+  "I have to jump to another call",
   "(Sound of someone typing)",
   "(Loud, painful, echo)",
   "(Child or Animal noises)",
