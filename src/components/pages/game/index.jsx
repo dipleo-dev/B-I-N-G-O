@@ -53,7 +53,6 @@ function Game() {
     if (checked.length >= bingos.length && !arrayEquals(checked, bingos)) {
       handleShow();
     }
-    console.log("NEW BINGO: ", !arrayEquals(checked, bingos));
     setBingos(checked);
   }, [markedTiles]);
 
