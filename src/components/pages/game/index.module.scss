@@ -3,7 +3,7 @@
     text-align: center;
     width:min-content;
     background-color:lightblue;
-    padding: 15px;
+    padding: 10px;
     margin: auto;
     overflow: hidden;
   }
@@ -23,11 +23,7 @@
     .container {
       display: grid ;
       grid-gap: 5px;
-      grid-template-columns: repeat(5, auto);
-      width:fit-content;
-     
-     
-      
+      grid-template-columns: repeat(5, auto) 
     }
     
     
